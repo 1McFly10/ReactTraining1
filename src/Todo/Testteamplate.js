@@ -2,8 +2,10 @@ import React,{Component}  from 'react'
 import Test from  '../Todo/Test'
 
 
-function Testteamplate({car, onMark}){
-
+function Testteamplate({car, onMark, visible}){
+    if(!visible) {
+        return null;
+    }
     const classes = ['card'];
     if(car.marked !== true){
         classes.push('marked');

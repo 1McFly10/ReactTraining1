@@ -82,8 +82,7 @@ function addTodo(title) {
 
 
         <Test />
-            <Test />
-            <Test />
+
         </div>
         </Context.Provider>
     )
