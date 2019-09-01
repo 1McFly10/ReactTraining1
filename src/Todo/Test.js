@@ -18,7 +18,8 @@ class Test extends React.Component{
             {name: 'Bentley Continental GT', price: '290.000', img: img, marked: true},
             {name: 'Aston Martin DB11', price: '360.000', img: img1, marked: true}
             ],
-        visible: true
+        visible: true,
+        appTitle: 'Cars catalog'
     };
     markedUp(name){
         const cars = this.state.cars.concat();
@@ -38,12 +39,25 @@ class Test extends React.Component{
         this.setState({visible: !this.state.visible})
     }
 
+    titleChangeHandler(title){
+        if(title.trim() === ''){
+            return
+        }
+        this.setState({
+            appTitle: title
+        })
+    }
+
+
     render() {
 
         return (
 
             <React.Fragment>
-                <button onClick={()=>this.toggleHandler()}>Toggle</button>
+                <h1>{this.state.appTitle}</h1>
+                <input type="text" placeholder='Change title' onChange={(event)=> this.titleChangeHandler(event.target.value)} value={this.state.appTitle}/>
+                <hr/>
+                <button onClick={()=>this.toggleHandler()} style={{marginTop:'1rem'}}>Toggle</button>
             <div style={{width:'100%', height: '100%', flexDirection:'row',display: 'flex',justifyContent: 'space-around', textAlign: 'center'}}>
 
             {this.renderCars()}
