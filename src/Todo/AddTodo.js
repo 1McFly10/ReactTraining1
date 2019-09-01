@@ -8,7 +8,7 @@ function useInputValue(defaultValue='') {
             value,
             onChange: event => setValue(event.target.value)
         },
-        clear: () =>setValue(''),
+        clear: () => setValue(''),
         value: () => value
     }
 }

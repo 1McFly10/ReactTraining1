@@ -8,6 +8,7 @@ import Context from '../context'
 import Loader from '../Loader'
 import Modal from '../Modal/Modal'
 import '../Modal/Modal.css'
+import Test from '../Todo/Test'
 
 const AddTodo = React.lazy(()=> new Promise(resolve =>{
     setTimeout(()=>{
@@ -17,9 +18,8 @@ const AddTodo = React.lazy(()=> new Promise(resolve =>{
 )
 
 function App() {
-    // const[todos, setTodos] = React.useState({});
+
     const[loading, setLoading] = React.useState(true);
-    console.log('App is runnig');
     let [todos, setTodos] = React.useState( [
         {id: 1, completed: false, title: 'Купить хлеб'},
         {id: 2, completed: false, title: 'Купить квас'},
@@ -79,7 +79,11 @@ function addTodo(title) {
                 <p>Список пуст</p>
             )}
 
-        {/*<ShowGoods goods={goods} />*/}
+
+
+        <Test />
+            <Test />
+            <Test />
         </div>
         </Context.Provider>
     )
