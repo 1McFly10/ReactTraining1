@@ -5,7 +5,7 @@ import Test from  '../Todo/Test'
 function Testteamplate({car, onMark}){
 
     const classes = ['card'];
-    if(car.marked == true){
+    if(car.marked !== true){
         classes.push('marked');
     }
   return(

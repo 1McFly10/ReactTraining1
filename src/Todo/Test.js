@@ -14,16 +14,17 @@ import Testteamplate from "./Testteamplate"
 
 class Test extends React.Component{
     state = {cars:[
-            {name: 'BMW M2 Coupe', price: '70.000', img: img2, marked: false},
-            {name: 'Bentley Continental GT', price: '290.000', img: img, marked: false},
-            {name: 'Aston Martin DB11', price: '360.000', img: img1, marked: false}
+            {name: 'BMW M2 Coupe', price: '70.000', img: img2, marked: true},
+            {name: 'Bentley Continental GT', price: '290.000', img: img, marked: true},
+            {name: 'Aston Martin DB11', price: '360.000', img: img1, marked: true}
             ]
     };
     markedUp(name){
         const cars = this.state.cars.concat();
-        const car = cars.find(el=> el.name === name)
-        car.marked = true;
+        const car = cars.find(el=> el.name === name);
+        car.marked = !car.marked;
         this.setState({cars})
+        // console.log(this.state.cars);
     }
     renderCars(){
         return this.state.cars.map((car)=>{
