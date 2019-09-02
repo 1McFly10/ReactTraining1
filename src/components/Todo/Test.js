@@ -1,7 +1,7 @@
 import React,{Component} from 'react'
-import img from '../images/bentley.jpg'
-import img1 from  '../images/aston_db11.jpg'
-import img2 from  '../images/bmw_m2_coupe.jpeg'
+import img from '../../images/bentley.jpg'
+import img1 from  '../../images/aston_db11.jpg'
+import img2 from  '../../images/bmw_m2_coupe.jpeg'
 import Testteamplate from "./Testteamplate"
 
 

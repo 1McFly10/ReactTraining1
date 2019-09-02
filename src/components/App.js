@@ -1,14 +1,14 @@
 import React, { useEffect } from "react";
 
-import TodoList from '../Todo/TodoList'
-import TodoItem from '../Todo/TodoItem'
-import ShowGoods from '../Todo/Goods'
-import TodoGoods from '../Todo/TodoGoods'
+import TodoList from '../components/Todo/TodoList'
+import TodoItem from '../components/Todo/TodoItem'
+import ShowGoods from '../components/Todo/Goods'
+import TodoGoods from '../components/Todo/TodoGoods'
 import Context from '../context'
-import Loader from '../Loader'
-import Modal from '../Modal/Modal'
+import Loader from '../components/Loader/Loader'
+import Modal from '../components/Modal/Modal'
 import '../Modal/Modal.css'
-import Test from '../Todo/Test'
+import Test from '../components/Todo/Test'
 
 const AddTodo = React.lazy(()=> new Promise(resolve =>{
     setTimeout(()=>{
