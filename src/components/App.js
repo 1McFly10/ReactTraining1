@@ -1,18 +1,15 @@
 import React, { useEffect } from "react";
 
 import TodoList from '../components/Todo/TodoList'
-import TodoItem from '../components/Todo/TodoItem'
-import ShowGoods from '../components/Todo/Goods'
-import TodoGoods from '../components/Todo/TodoGoods'
 import Context from '../context'
 import Loader from '../components/Loader/Loader'
 import Modal from '../components/Modal/Modal'
-import '../Modal/Modal.css'
+import '../components/Modal/Modal.css'
 import Test from '../components/Todo/Test'
 
 const AddTodo = React.lazy(()=> new Promise(resolve =>{
     setTimeout(()=>{
-        resolve(import('../Todo/AddTodo'))
+        resolve(import('../components/Todo/AddTodo'))
     },3000)
 })
 )
@@ -26,11 +23,7 @@ function App() {
         {id: 3, completed: false, title: 'Купить молоко'}
 
     ])
-    let goods = [
-        {id: 5, name: 'Iphone XR', price: 1300 },
-        {id: 3, name: 'Iphone X', price: 1100},
-        {id: 1, name: 'Iphone XS', price: 2100}
-    ];
+   
 
     useEffect(()=>{
         fetch('https://jsonplaceholder.typicode.com/todos?_limit=5')

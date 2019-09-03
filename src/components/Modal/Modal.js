@@ -1,5 +1,5 @@
 import React from 'react'
-import '../Modal/Modal.css'
+
 export default class Modal extends React.Component{
     state ={
         isOpen: false
